@@ -5,6 +5,16 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `Title from nuxt config`,
+  },
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        data: `@import "${__dirname}/src/styles/colors";`,
+      }
+    },
+    'gatsby-plugin-styled-components'
+  ],
 }
