@@ -38,7 +38,7 @@ const MainContainer = styled.div`
     position: fixed;
     top: 100px;
     left: 70px;
-    z-index: 2;
+    z-index: 99;
 
     &>*{
       margin-bottom: 150px;

@@ -5,6 +5,7 @@ import { colors } from "../styles/variables"
 
 
 const Wrapper = styled.div`
+  z-index: 99;
   cursor: pointer;
   display: flex;
   flex-direction: column;

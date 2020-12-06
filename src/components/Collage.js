@@ -6,7 +6,6 @@ import { breakpoints } from "../styles/variables"
 
 const Wrapper = styled.div`
   width: 40%;
-  background-color: red;
   margin: auto;
   position: relative;
   height: 70vh;

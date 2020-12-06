@@ -6,6 +6,7 @@ import Facebook from '../assets/facebook.inline.svg'
 import Phone from '../assets/phone.inline.svg'
 
 const Wrapper = styled.div`
+  z-index: 99;
   display: flex;
   flex-direction: column;
   width: fit-content;

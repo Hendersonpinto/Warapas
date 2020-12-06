@@ -7,6 +7,7 @@ import { colors } from "../styles/variables"
 
 
 const Nav = styled.nav`
+  z-index: 20;
   position: fixed;
   top: 0;
   left: 0;
