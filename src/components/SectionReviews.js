@@ -64,11 +64,11 @@ const Review = styled.div`
       transition: all 1000ms;
     }
     &.review-exit {
-      transform: translateX(100px);
+      transform: translateX(0);
       opacity: 1;
     }
     &.review-exit-active {
-      transform: translateX(0);
+      transform: translateX(100px);
       opacity: 0;
       transition: all 1000ms;
     }
