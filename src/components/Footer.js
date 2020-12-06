@@ -8,7 +8,6 @@ const BottomNav = styled.nav`
   padding-bottom: 90px;
   width: auto;
   background-color: ${props => (props.theme === "dark" ? colors.blue : colors.white)};
-  border-top: 1px solid red;
 
   .inner {
     display: flex;

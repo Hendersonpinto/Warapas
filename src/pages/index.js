@@ -14,7 +14,7 @@ import SectionContact from "../components/SectionContact"
 
 const SecContainer = styled.div`
   margin: 250px 40px 20px 40px;
-  background-color: ${props => (props.theme === "dark" ? colors.blue : 'wheat')};
+  background-color: ${props => (props.theme === "dark" ? colors.blue : colors.white)};
   flex: 1;
   padding: 0px 60px;
 
@@ -24,7 +24,6 @@ const SecContainer = styled.div`
 `
 
 const Home = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <SecContainer>
