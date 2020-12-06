@@ -9,3 +9,31 @@
   // TO-DO: This line needs to be deleted
   min-height: 100vh;
 }
+
+a{
+  text-decoration: none;
+  color: $blue;
+}
+
+p{
+  font-family: 'Cormorant Garamond';
+  font-size: 16px;
+  line-height: 150%;
+}
+
+h1{
+  font-family: 'Cormorant Garamond';
+  font-weight: 700;
+  font-size: 48px;
+}
+
+h3 {
+  font-family: 'Raleway';
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 4px;
+  color: $gold;
+  text-transform: uppercase;
+  text-decoration: $blue;
+}
+
