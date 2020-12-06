@@ -8,6 +8,7 @@ import Layout from "../components/layouts/layout"
 import Collage from "../components/Collage"
 import SectionAbout from "../components/SectionAbout"
 import SectionReviews from "../components/SectionReviews"
+import SectionContact from "../components/SectionContact"
 
 
 
@@ -23,12 +24,14 @@ const SecContainer = styled.div`
 `
 
 const Home = ({ data }) => {
+  console.log(data)
   return (
     <Layout>
       <SecContainer>
         <Collage data={data} />
         <SectionAbout />
         <SectionReviews />
+        <SectionContact data={data} />
       </SecContainer>
     </Layout>
   )
@@ -64,6 +67,9 @@ export const pageQuery = graphql`
       ...fluidImage
     }
     imageSix: file(relativePath: { eq: "dish6.png" }) {
+      ...fluidImage
+    }
+    imageContact: file(relativePath: { eq: "contact.png" }) {
       ...fluidImage
     }
   }

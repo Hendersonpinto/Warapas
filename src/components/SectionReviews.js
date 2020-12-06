@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import styled from "styled-components"
 
 
-import { breakpoints, colors } from "../styles/variables"
+import { colors } from "../styles/variables"
 import { reviews } from "../config/reviews"
 
 const Wrapper = styled.div`
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   }
 `
 const ReviewWrapper = styled.div`
-  width: 100%;
+  width: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +40,7 @@ const ReviewWrapper = styled.div`
   `
 
 const Review = styled.div`
-    width: 40%;
+    width: 60%;
     text-align: center;
     color: ${props => (props.theme === "dark" ? colors.white : colors.blue)};
     margin: 50px 0;

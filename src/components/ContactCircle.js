@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { colors } from "../styles/variables"
 
 const Wrapper = styled.div`
+  z-index: 10;
   cursor: pointer;
   border-radius: 50%;
   position: fixed;
