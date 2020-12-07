@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { colors } from "../styles/variables"
+import { colors, breakpoints } from "../styles/variables"
 
 const buttonProps = {
   light: Boolean,
@@ -46,6 +46,11 @@ const SButtonFilled = styled('button', buttonProps)`
   .label {
     width: 100%;
     margin: auto;
+  }
+
+  @media ${breakpoints.mobile} { 
+    height: 44px;
+    padding: 0 30px;
   }
 `
 

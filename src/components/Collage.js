@@ -13,6 +13,11 @@ const Wrapper = styled.div`
   @media ${breakpoints.desktopXL} { 
     height: 100vh;
   }
+  @media ${breakpoints.mobile} { 
+    margin: 0;
+    width: 100%;
+    height: 50vh;
+  }
 `
 
 const ImageWrapper = styled.div`

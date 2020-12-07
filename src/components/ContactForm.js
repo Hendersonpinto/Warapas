@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import SButtonFilled from "./SButtonFilled"
-import { colors } from "../styles/variables"
+import { colors, breakpoints } from "../styles/variables"
 
 const Form = styled.form`
   width: 80%;
@@ -12,6 +12,11 @@ const TopWrapper = styled.div`
   justify-content: space-between;
   margin-bottom: 160px;
   margin-top: 80px;
+
+  @media ${breakpoints.mobile} { 
+    flex-direction: column;
+    margin-bottom: 0;
+  }
 `
 const Field = styled.div`
   width: 40%;
@@ -29,6 +34,11 @@ const Field = styled.div`
   label {
     margin-left: 20px;
     font-family: 'Cormorant Garamond';
+  }
+
+  @media ${breakpoints.mobile} { 
+    width: 90%;
+    margin-bottom: 60px;
   }
 `
 const TextWrapper = styled.div`

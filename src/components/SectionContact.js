@@ -12,6 +12,10 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
+
+  @media ${breakpoints.mobile} { 
+    flex-direction: column-reverse;
+  }
 `
 const Left = styled.div`
   width: 50%;
@@ -29,6 +33,20 @@ const Left = styled.div`
   &:first-child{
     margin-right: 60px;
   }
+
+  @media ${breakpoints.mobile} { 
+    align-items: center;
+    margin: 0;
+    width: 100%;
+
+    &:first-child{
+      margin-right: 0;
+    }
+
+    form{
+      width: 100%;
+    }
+  }
 `
 
 const Right = styled.div`
@@ -36,6 +54,11 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media ${breakpoints.mobile} { 
+    width: 100%;
+    margin-bottom: 56px;
+  }
 `
 
 const ImageWrapper = styled.div`

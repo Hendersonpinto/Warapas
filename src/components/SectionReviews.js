@@ -3,7 +3,7 @@ import { CSSTransition } from 'react-transition-group';
 import styled from "styled-components"
 
 
-import { colors } from "../styles/variables"
+import { colors, breakpoints } from "../styles/variables"
 import { reviews } from "../config/reviews"
 
 const Wrapper = styled.div`
@@ -16,6 +16,11 @@ const Wrapper = styled.div`
 
   h3{
     color: ${props => (props.theme === "dark" ? colors.white : colors.blue)};
+    @media ${breakpoints.mobile} { 
+      font-size: 16px;
+      text-align: center;
+      border: none;
+    }
   }
 `
 const ReviewWrapper = styled.div`
@@ -37,7 +42,11 @@ const ReviewWrapper = styled.div`
   &:first-child{
     margin-right: 60px;
   }
-  `
+
+  @media ${breakpoints.mobile} { 
+    width: 100%;
+  }
+`
 
 const Review = styled.div`
     width: 60%;
@@ -75,6 +84,11 @@ const Review = styled.div`
     &.review-exit-done {
       opacity: 0;
     }
+
+    @media ${breakpoints.mobile} { 
+      margin: 30px 0;
+      width: 100%;
+    }
   `
 
 const SliderWrapper = styled.div`
@@ -83,6 +97,10 @@ const SliderWrapper = styled.div`
 
     &>*{
       margin-right: 20px;
+    }
+
+    @media ${breakpoints.mobile} { 
+      margin: 16px 0;
     }
   `
 

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { colors } from "../styles/variables"
+import { colors, breakpoints } from "../styles/variables"
 
 const BottomNav = styled.nav`
   padding: 20px;
@@ -14,8 +14,17 @@ const BottomNav = styled.nav`
     justify-content: space-between;
     width: 80%;
     margin: auto;
-  }
+    @media ${breakpoints.mobile} { 
+      width: 100%;
+      margin: 0;
 
+      a{
+        h1{
+          font-size: 24px;
+        }
+      }
+    }
+  }
 `
 
 const Footer = ({ children }) => {

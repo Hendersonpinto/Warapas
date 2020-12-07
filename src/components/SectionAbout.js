@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { useMediaQuery } from 'react-responsive'
+
 
 
 import { breakpoints, colors } from "../styles/variables"
@@ -11,6 +13,11 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
+
+  @media ${breakpoints.mobile} { 
+    flex-direction: column;
+    width: 100%;
+  }
 `
 const Left = styled.div`
   width: 270px;
@@ -28,6 +35,21 @@ const Left = styled.div`
 
   &:first-child{
     margin-right: 60px;
+  }
+
+  @media ${breakpoints.mobile} { 
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 42px;
+
+    h1{
+      font-size: 32px;
+    }
+
+    &:first-child{
+      margin-right: 0;
+    }
   }
 `
 
@@ -54,15 +76,24 @@ const Right = styled.div`
     opacity: 0.64;
   }
 
+  @media ${breakpoints.mobile} { 
+    width: 100%;
+    align-items: center;
 
+    p{
+      text-align: center;
+    }
+  }
 `
 
 
 const SectionAbout = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 480px)' })
+
   return (
     <Wrapper>
       <Left>
-        <h1>Food<br />with<br />attitude</h1>
+        {isMobile ? <h1>Food with attitude</h1> : <h1>Food<br />with<br />attitude</h1>}
       </Left>
       <Right>
         <h3>About Us</h3>
