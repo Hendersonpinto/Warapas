@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { colors } from "../styles/variables"
+import { colors, breakpoints } from "../styles/variables"
 
 const Wrapper = styled.div`
   z-index: 99;
@@ -33,6 +33,22 @@ const Wrapper = styled.div`
       color: ${props => (props.theme === "dark" ? colors.blue : colors.white)};
     }
   }
+
+  @media ${breakpoints.mobile} { 
+    z-index: auto;
+    position: absolute;
+    right: 5px;
+    left: initial;
+    height: 75px;
+    width: 75px;
+    top: 110px;
+
+    p{
+      font-size: 14px;
+      line-height: 100%;
+    }
+  }
+
 `
 
 const ContactCircle = () => {

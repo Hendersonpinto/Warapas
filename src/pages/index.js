@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 
-import { colors } from "../styles/variables"
+import { colors, breakpoints } from "../styles/variables"
 import Layout from "../components/layouts/layout"
 import Collage from "../components/Collage"
 import SectionAbout from "../components/SectionAbout"
@@ -20,6 +20,11 @@ const SecContainer = styled.div`
 
   &>*{
     margin-bottom: 100px;
+  }
+
+  @media ${breakpoints.mobile} { 
+    margin: 35vh 40px 20px 40px;
+    padding: 0;
   }
 `
 

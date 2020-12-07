@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 
-import { colors } from "../styles/variables"
+import { colors, breakpoints } from "../styles/variables"
 
 
 const Nav = styled.nav`
@@ -34,6 +34,10 @@ const Nav = styled.nav`
     font-size: 50px;
     font-family: 'Cormorant Garamond';
     line-height: 150%;
+  }
+
+  @media ${breakpoints.mobile} { 
+    height: 100vh;  
   }
 `
 
